@@ -8,7 +8,7 @@
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
   },
-  "homepage": "http://cjayasanka.github.io/cjayasanka.me",
+  "homepage": "http://adoring-hoover-30e52c.netlify.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
