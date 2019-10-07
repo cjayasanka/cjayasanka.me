@@ -4,10 +4,10 @@ import chathura from "../../media/chathura.jpg";
 
 const ResumeBody = () => {
   return (
-    <div>
+    <div className="container">
       <div>
         <img
-          style={{ height: "50%", width: "100%", objectFit: "contain" }}
+          style={{ height: "300px", width: "100%", objectFit: "cover" }}
           src={back}
           alt="cover image"
           class="ui img"
@@ -27,6 +27,93 @@ const ResumeBody = () => {
           alt="avatar"
           class="ui medium circular image"
         />
+      </div>
+      <div>
+        <h4 class="title">
+          Chathura Jayasanka
+          <br></br>
+        </h4>
+        <h6 class="description">
+          Computer Science & Engineering Undergraduate
+        </h6>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ml-auto mr-auto text-center">
+          <p>
+            Interested in full-stack development. Looking to explore new areas
+            and work for an organization which provides me with the opportunity
+            to improve my skills and knowledge to growth along with the
+            organization objective in a challenging environment.{" "}
+          </p>
+          <br></br>
+        </div>
+      </div>
+
+      {/* steps */}
+      <div class="ui four column grid">
+        <div class="column">
+          <div class="ui fluid vertical steps">
+            <div class="step">
+              <i class="graduation cap icon"></i>
+              <div class="content">
+                <div class="title">EDUCATION</div>
+              </div>
+            </div>
+            <div class="active step">
+              <i class="briefcase icon"></i>
+              <div class="content">
+                <div class="title">EXPERIENCE</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <i class="book icon"></i>
+              <div class="content">
+                <div class="title">PROJECTS</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <i class="clipboard list icon"></i>
+              <div class="content">
+                <div class="title">SKILLS & INTERESTS</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <i class="trophy icon"></i>
+              <div class="content">
+                <div class="title">ACHIEVEMENTS & AWARDS</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <i class="certificate icon"></i>
+              <div class="content">
+                <div class="title">CERTIFICATIONS</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <i class="building icon"></i>
+              <div class="content">
+                <div class="title">PROFESSIONAL AFFILIATIONS</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <i class="bullhorn icon"></i>
+              <div class="content">
+                <div class="title">ACTIVITIES</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="three column">
+          <div class="ui raised segment">
+            <p>The steps take up the entire column width</p>
+          </div>
+        </div>
       </div>
     </div>
   );
