@@ -38,12 +38,12 @@ const ResumeBody = () => {
         </h6>
       </div>
       <div class="row">
-        <div class="col-md-6 ml-auto mr-auto text-center">
+        <div class="ui container">
           <p>
             Interested in full-stack development. Looking to explore new areas
             and work for an organization which provides me with the opportunity
             to improve my skills and knowledge to growth along with the
-            organization objective in a challenging environment.{" "}
+            organization objective in a challenging environment.
           </p>
           <br></br>
         </div>
