@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import back from "../../media/back.jpg";
 import chathura from "../../media/chathura.jpg";
 import Education from "./Education";
@@ -8,8 +10,40 @@ import Awards from "./Awards";
 import Certifications from "./Certifications";
 import Affiliations from "./Affiliations";
 import Activities from "./Activities";
+import Skils from "./Skills";
 
-const ResumeBody = () => {
+import { selectCategory } from "../../actions";
+
+const bodyResolver = (selectedCategory) => {
+  if (selectedCategory === "EDUCATION") {
+    return <Education />;
+  }
+  if (selectedCategory === "EXPERIENCE") {
+    return <Experience />;
+  }
+  if (selectedCategory === "PROJECTS") {
+    return <Projects />;
+  }
+  if (selectedCategory === "SKILLS") {
+    return <Skils />;
+  }
+  if (selectedCategory === "AWARDS") {
+    return <Awards />;
+  }
+  if (selectedCategory === "CERTIFICATIONS") {
+    return <Certifications />;
+  }
+  if (selectedCategory === "AFFILIATIONS") {
+    return <Affiliations />;
+  }
+  if (selectedCategory === "ACTIVITIES") {
+    return <Activities />;
+  }
+
+  return <Education />;
+};
+
+const ResumeBody = (props) => {
   return (
     <div className="container">
       <div>
@@ -60,65 +94,71 @@ const ResumeBody = () => {
       <div class="ui grid">
         <div class="four wide column">
           <div class="ui fluid vertical steps">
-            <div class="step">
+            <a class="step" onClick={() => props.selectCategory("EDUCATION")}>
               <i class="graduation cap icon"></i>
               <div class="content">
                 <div class="title">EDUCATION</div>
               </div>
-            </div>
-            <div class="active step">
+            </a>
+            <a class="step" onClick={() => props.selectCategory("EXPERIENCE")}>
               <i class="briefcase icon"></i>
               <div class="content">
                 <div class="title">EXPERIENCE</div>
               </div>
-            </div>
+            </a>
 
-            <div class="step">
+            <a class="step" onClick={() => props.selectCategory("PROJECTS")}>
               <i class="book icon"></i>
               <div class="content">
                 <div class="title">PROJECTS</div>
               </div>
-            </div>
+            </a>
 
-            <div class="step">
+            <a class="step" onClick={() => props.selectCategory("SKILLS")}>
               <i class="clipboard list icon"></i>
               <div class="content">
                 <div class="title">SKILLS & INTERESTS</div>
               </div>
-            </div>
+            </a>
 
-            <div class="step">
+            <a class="step" onClick={() => props.selectCategory("AWARDS")}>
               <i class="trophy icon"></i>
               <div class="content">
                 <div class="title">ACHIEVEMENTS & AWARDS</div>
               </div>
-            </div>
+            </a>
 
-            <div class="step">
+            <a
+              class="step"
+              onClick={() => props.selectCategory("CERTIFICATIONS")}
+            >
               <i class="certificate icon"></i>
               <div class="content">
                 <div class="title">CERTIFICATIONS</div>
               </div>
-            </div>
+            </a>
 
-            <div class="step">
+            <a
+              class="step"
+              onClick={() => props.selectCategory("AFFILIATIONS")}
+            >
               <i class="building icon"></i>
               <div class="content">
                 <div class="title">PROFESSIONAL AFFILIATIONS</div>
               </div>
-            </div>
+            </a>
 
-            <div class="step">
+            <a class="step" onClick={() => props.selectCategory("ACTIVITIES")}>
               <i class="bullhorn icon"></i>
               <div class="content">
                 <div class="title">ACTIVITIES</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <div class="twelve wide column">
           <div class="ui fluid raised segment">
-            <Experience />
+            {bodyResolver(props.selectedCategory)}
           </div>
         </div>
       </div>
@@ -126,4 +166,11 @@ const ResumeBody = () => {
   );
 };
 
-export default ResumeBody;
+const mapStateToProps = (state) => {
+  return { selectedCategory: state.selectedCategory };
+};
+
+export default connect(
+  mapStateToProps,
+  { selectCategory }
+)(ResumeBody);

@@ -7,7 +7,7 @@ import ResumeBody from "./resume/ResumeBody";
 const Resume = () => {
   return (
     <div className="ui basic inverted center aligned segment">
-      <Nav />
+      {/* <Nav /> */}
       <ResumeBody />
     </div>
   );
