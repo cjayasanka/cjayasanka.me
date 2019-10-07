@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import Container from "./Container";
 import Footer from "./Footer";
 
-const Temp = () => {
+const Home = () => {
   return (
     <div className="ui inverted vertical center aligned segment">
       <Nav />
@@ -14,4 +14,4 @@ const Temp = () => {
   );
 };
 
-export default Temp;
+export default Home;

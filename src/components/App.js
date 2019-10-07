@@ -1,11 +1,14 @@
 import React from "react";
 
-import Temp from "./Temp";
+import Home from "./Home";
+import Resume from "./Resume";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const App = () => {
   return (
     <div>
-      <Temp />
+      <Home />
     </div>
   );
 };
