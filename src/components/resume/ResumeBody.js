@@ -4,6 +4,10 @@ import chathura from "../../media/chathura.jpg";
 import Education from "./Education";
 import Experience from "./Experience";
 import Projects from "./Projects";
+import Awards from "./Awards";
+import Certifications from "./Certifications";
+import Affiliations from "./Affiliations";
+import Activities from "./Activities";
 
 const ResumeBody = () => {
   return (
@@ -114,7 +118,7 @@ const ResumeBody = () => {
         </div>
         <div class="twelve wide column">
           <div class="ui fluid raised segment">
-            <Projects />
+            <Experience />
           </div>
         </div>
       </div>
