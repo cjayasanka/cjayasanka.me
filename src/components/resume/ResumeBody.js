@@ -1,6 +1,9 @@
 import React from "react";
 import back from "../../media/back.jpg";
 import chathura from "../../media/chathura.jpg";
+import Education from "./Education";
+import Experience from "./Experience";
+import Projects from "./Projects";
 
 const ResumeBody = () => {
   return (
@@ -50,8 +53,8 @@ const ResumeBody = () => {
       </div>
 
       {/* steps */}
-      <div class="ui four column grid">
-        <div class="column">
+      <div class="ui grid">
+        <div class="four wide column">
           <div class="ui fluid vertical steps">
             <div class="step">
               <i class="graduation cap icon"></i>
@@ -109,9 +112,9 @@ const ResumeBody = () => {
             </div>
           </div>
         </div>
-        <div class="three column">
-          <div class="ui raised segment">
-            <p>The steps take up the entire column width</p>
+        <div class="twelve wide column">
+          <div class="ui fluid raised segment">
+            <Projects />
           </div>
         </div>
       </div>
